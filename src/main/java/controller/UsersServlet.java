@@ -1,172 +1,75 @@
 package controller;
 
-import model.User;
-import org.eclipse.jetty.server.Authentication;
+import model.Users;
 import utils.HtmlUtils;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 
 public class UsersServlet extends HttpServlet {
-    private static List<User> users = new List<User>() {
-        @Override
-        public int size() {
-            return 0;
-        }
 
-        @Override
-        public boolean isEmpty() {
-            return false;
-        }
 
-        @Override
-        public boolean contains(Object o) {
-            return false;
-        }
+       private List<Users> users = new ArrayList<>();
 
-        @Override
-        public Iterator<User> iterator() {
-            return null;
-        }
 
-        @Override
-        public Object[] toArray() {
-            return new Object[0];
-        }
 
-        @Override
-        public <T> T[] toArray(T[] a) {
-            return null;
-        }
-
-        @Override
-        public boolean add(User user) {
-            return false;
-        }
-
-        @Override
-        public boolean remove(Object o) {
-            return false;
-        }
-
-        @Override
-        public boolean containsAll(Collection<?> c) {
-            return false;
-        }
-
-        @Override
-        public boolean addAll(Collection<? extends User> c) {
-            return false;
-        }
-
-        @Override
-        public boolean addAll(int index, Collection<? extends User> c) {
-            return false;
-        }
-
-        @Override
-        public boolean removeAll(Collection<?> c) {
-            return false;
-        }
-
-        @Override
-        public boolean retainAll(Collection<?> c) {
-            return false;
-        }
-
-        @Override
-        public void clear() {
-
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            return false;
-        }
-
-        @Override
-        public int hashCode() {
-            return 0;
-        }
-
-        @Override
-        public User get(int index) {
-            return null;
-        }
-
-        @Override
-        public User set(int index, User element) {
-            return null;
-        }
-
-        @Override
-        public void add(int index, User element) {
-
-        }
-
-        @Override
-        public User remove(int index) {
-            return null;
-        }
-
-        @Override
-        public int indexOf(Object o) {
-            return 0;
-        }
-
-        @Override
-        public int lastIndexOf(Object o) {
-            return 0;
-        }
-
-        @Override
-        public ListIterator<User> listIterator() {
-            return null;
-        }
-
-        @Override
-        public ListIterator<User> listIterator(int index) {
-            return null;
-        }
-
-        @Override
-        public List<User> subList(int fromIndex, int toIndex) {
-            return null;
-        }
-    };
+   private static int likesCount = 0;
+   private static int dislikesCount = 0;
+   private static int i = 0;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter writer = resp.getWriter();
+        List <Users> d = new ArrayList<>();
+
+        d.add(new Users(1, "Petya", "http://nenadoada.ru/upload/iblock/fad/fad0c9a52f5e7f1368de8c5af45d1817.jpg"));
+        d.add(new Users(2, "Katya", "https://uznayvse.ru/person/kate_clapp/clapp01.jpg"));
+        d.add(new Users(3, "Sergey", "https://images.aif.ru/011/493/6e9f11cf74dc5b4318a9b36e3bc81100.jpg"));
+        users = d;
+        if (i >= users.size()) {
+            resp.sendRedirect("/liked");
+        } else {
+
+            PrintWriter writer = resp.getWriter();
 //        writer.write("Hello world");
-        writer.print(HtmlUtils.readPage("users.html"));
+            Users user = users.get(i);
+            writer.print(String.format(HtmlUtils.readPage("users.html"), user.getUrlIMG(), user.getName(), user.getId()));
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String action = req.getParameter("action");
-        if (action.equals("Yes")) {
-            PrintWriter writer = resp.getWriter();
-            String outText = HtmlUtils.readPage("liked.html");
-            users.add();            ;
+//        String action = req.getParameter("action");
 
-        }
-        if (action.equals("No")) {
+            String chose = req.getParameter("chose");
+        if (chose.equals("YES")) {
             PrintWriter writer = resp.getWriter();
-            String outText = HtmlUtils.readPage("users.html");
+            likesCount++;
+            System.out.println("Likes: "+ likesCount + " Turn " + i);
+            System.out.println("Dislikes " + dislikesCount + " Turn " + i);
+            System.out.println("end of  turn");
+            LikedServlet.likedusers.add(users.get(i));
+            i++;
+
+
+
+        } else if (chose.equals("NO")) {
+            PrintWriter writer = resp.getWriter();
+            dislikesCount++;
+            System.out.println("Likes: "+ likesCount + " Turn " + i);
+            System.out.println("Dislikes " + dislikesCount + " Turn " + i);
+            System.out.println("end of  turn");
+            i++;
         } else {
             doGet(req, resp);
         }
+
+        resp.sendRedirect("/users");
     }
 
     @Override
