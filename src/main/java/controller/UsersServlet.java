@@ -25,12 +25,12 @@ public class UsersServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List <Users> d = new ArrayList<>();
+        //List <Users> d = new ArrayList<>();
 
-        d.add(new Users(1, "Petya", "http://nenadoada.ru/upload/iblock/fad/fad0c9a52f5e7f1368de8c5af45d1817.jpg"));
-        d.add(new Users(2, "Katya", "https://uznayvse.ru/person/kate_clapp/clapp01.jpg"));
-        d.add(new Users(3, "Sergey", "https://images.aif.ru/011/493/6e9f11cf74dc5b4318a9b36e3bc81100.jpg"));
-        users = d;
+        users.add(new Users(1, "Petya", "http://nenadoada.ru/upload/iblock/fad/fad0c9a52f5e7f1368de8c5af45d1817.jpg"));
+        users.add(new Users(2, "Katya", "https://uznayvse.ru/person/kate_clapp/clapp01.jpg"));
+        users.add(new Users(3, "Sergey", "https://images.aif.ru/011/493/6e9f11cf74dc5b4318a9b36e3bc81100.jpg"));
+        //users = d;
         if (i >= users.size()) {
             resp.sendRedirect("/liked");
         } else {
@@ -38,7 +38,7 @@ public class UsersServlet extends HttpServlet {
             PrintWriter writer = resp.getWriter();
 //        writer.write("Hello world");
             Users user = users.get(i);
-            writer.print(String.format(HtmlUtils.readPage("users.html"), user.getUrlIMG(), user.getName(), user.getId()));
+           writer.print(String.format(HtmlUtils.readPage("users.html"), user.getUrlIMG(), user.getName(), user.getId()));
         }
     }
 
