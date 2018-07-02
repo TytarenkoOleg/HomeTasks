@@ -3,6 +3,7 @@ package controller;
 import model.Users;
 import utils.HtmlUtils;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,13 +24,19 @@ public class UsersServlet extends HttpServlet {
    private static int dislikesCount = 0;
    private static int i = 0;
 
-    @Override
+   @Override
+   public void init (ServletConfig config) throws ServletException {
+
+
+       users.add(new Users(1L, "Petya", "http://nenadoada.ru/upload/iblock/fad/fad0c9a52f5e7f1368de8c5af45d1817.jpg"));
+       users.add(new Users(2L, "Katya", "https://uznayvse.ru/person/kate_clapp/clapp01.jpg"));
+       users.add(new Users(3L, "Sergey", "https://images.aif.ru/011/493/6e9f11cf74dc5b4318a9b36e3bc81100.jpg"));
+   }
+
+   @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //List <Users> d = new ArrayList<>();
 
-        users.add(new Users(1, "Petya", "http://nenadoada.ru/upload/iblock/fad/fad0c9a52f5e7f1368de8c5af45d1817.jpg"));
-        users.add(new Users(2, "Katya", "https://uznayvse.ru/person/kate_clapp/clapp01.jpg"));
-        users.add(new Users(3, "Sergey", "https://images.aif.ru/011/493/6e9f11cf74dc5b4318a9b36e3bc81100.jpg"));
         //users = d;
         if (i >= users.size()) {
             resp.sendRedirect("/liked");

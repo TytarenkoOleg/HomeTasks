@@ -1,21 +1,24 @@
 package model;
 
 public class Users {
-    private int id;
+    private Long id;
     private String name;
     private String urlIMG;
 
-    public Users(int id, String name, String urlIMG) {
+    public Users(Long id, String name, String urlIMG) {
         this.id = id;
         this.name = name;
         this.urlIMG = urlIMG;
     }
 
-    public int getId() {
-        return id;
+    public Users() {
     }
 
-    public void setId(int id) {
+    public Long getId() {
+        return this.id;
+    }
+
+    public void setId(Long id) {
         this.id = id;
     }
 

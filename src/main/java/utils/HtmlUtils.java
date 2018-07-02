@@ -13,6 +13,7 @@ import java.util.List;
 
         public static String readPage(String fileName) {
             String outText = "";
+//            String filepath = "src/main/resources/html/" + fileName;
             String filepath = userDir + sep + ".idea" + sep + "lib" + sep + "html" + sep + fileName;
             try (FileReader reader = new FileReader(filepath);
                  BufferedReader buffReader = new BufferedReader(reader)) {
