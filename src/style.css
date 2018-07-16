@@ -1,0 +1,87 @@
+        .box1 {
+            background: lightgrey;
+            width: 1280px;
+            height: 1626px;
+            border: 1px solid #000;
+            border-color: darkgray;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .out {
+            text-align: center;
+        }
+
+        .inner1 {
+            background: lightgrey;
+            width: 1280px;
+            height: 86px;
+        }
+
+        .b1 {
+            font-family: Roboto;
+            background-color: transparent;
+            color: #16a085;
+            font-size: 18px;
+            font-weight: 900;
+            line-height: 100px;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        .fig {
+            text-align: center;
+        }
+
+        .img {
+            text-align: center;
+            margin-top: 0px;
+        }
+
+        .inner2 {
+            background: lightgrey;
+            width: 1280px;
+            height: 650px;
+            margin: 0px;
+            margin-top: 0px;
+        }
+
+        h3 {
+            text-align: center;
+            padding-top: 35px;
+        }
+
+        .inner3 {
+            width: 1280px;
+            height: 650px;
+            margin: auto;
+            font-family: Roboto;
+            color: #373737;
+            line-height: 150%;
+        }
+
+        .b2 {
+            border-radius: 3px;
+            background-color: #16a085;
+            width: 192px;
+            height: 51px;
+            color: white;
+            border: 0;
+            font-family: GothamRounded;
+            font-size: 20px;
+            margin-top: 45px;
+        }
+
+        .col {
+            text-align: right;
+            font-family: Roboto;
+            font-size: 16px;
+            width: 1280px;
+            height: 96px;
+            background: white;
+            line-height: 96px;
+        }
+
+        div {
+            text-align: center;
+        }
