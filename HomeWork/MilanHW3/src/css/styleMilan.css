@@ -1,0 +1,139 @@
+.conteiner{
+    width: 1366px;
+    height: 768px;
+    font-family: Verdana;
+    color: white;
+    background-image: url("../imeges/background.jpg");
+    background-size: cover;
+    margin: auto;
+    padding-top: 49px;
+}
+.header{
+    width: 775px;
+}
+.header-img{
+    width: 46px;
+    height: 44px;
+    margin-left: 155px;
+    float: left;
+    background-image: url("../imeges/logo.png");
+}
+.header-img:hover{
+    background-image: url("../imeges/logo_hover.png");
+}
+.header-text-left {
+    width: 104px;
+    text-align: left;
+    float: left;
+    position: relative;
+}
+.header-text{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.header-text1{
+    font-size: 29px;
+    padding-left: 13px;
+    position: absolute;
+    top: -7px;
+}
+.header-text2{
+    font-size: 18px;
+    padding-left: 15px;
+    display: block;
+    padding-top: 7px;
+}
+.header-text:hover{
+    color: #f26522;
+}
+.header-contacts{
+    width: 243px;
+    font-size: 18px;
+    text-align: right;
+    margin-left: 976px;
+    position: absolute;
+}
+.img{
+    width: 1059px;
+    margin-left: 155px;
+    text-align: center;
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 47px;
+    flex-flow: wrap;
+    padding-bottom: 0;
+}
+.fig{
+    margin: 0 0 58px 0;
+    position: relative;
+    overflow: hidden;
+}
+.dekor{
+    text-decoration: none;
+    color: white;
+}
+.foto{
+    width: 307px;
+    display: table;
+    position: relative;
+}
+.foto_block{
+    width: 312px;
+    height: 63px;
+    background: #f26522;
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    font-weight: 400;
+}
+.fig:hover .foto_block{
+    bottom: 43px;
+    transition: 1s;
+}
+.foto_block_text1{
+    font-size: 10px;
+    text-align: left;
+    width: 38px;
+    display: inline-block;
+    margin-right: 126px;
+    padding-top: 16px;
+}
+.foto_block_text2{
+    font-size: 14px;
+    text-align: left;
+    display: inline-block;
+    width: 109px;
+    padding-top: 26px;
+    text-transform: capitalize;
+}
+.details{
+    text-decoration: none;
+    color: white;
+}
+.border{
+    border:  2px solid;
+    border-image: linear-gradient(to bottom, white, black) 1;
+}
+.figcap {
+    text-transform: capitalize;
+    display: block;
+    padding-top: 22px;
+}
+.figcap:hover{
+    color: #f26522;
+}
+footer{
+    width: 349px;
+    background: transparent;
+    margin: auto;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 30px;
+    padding: 0;
+}
+
+
