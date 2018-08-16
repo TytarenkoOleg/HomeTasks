@@ -18,7 +18,7 @@
     float: left;
     background-image: url("../imeges/logo.png");
 }
-.header-img:hover{
+.logo:hover .header-img{
     background-image: url("../imeges/logo_hover.png");
 }
 .header-text-left {
@@ -45,7 +45,7 @@
     display: block;
     padding-top: 7px;
 }
-.header-text:hover{
+.logo:hover .header-text{
     color: #f26522;
 }
 .header-contacts{
@@ -67,18 +67,25 @@
     flex-flow: wrap;
     padding-bottom: 0;
 }
+.img_block{
+    margin-bottom: 58px
+}
 .fig{
-    margin: 0 0 58px 0;
+    margin: 0 0 20px 0;
+    display: block;
+    width: 307px;
+    height: 200px;
     position: relative;
     overflow: hidden;
 }
+
 .dekor{
     text-decoration: none;
     color: white;
 }
 .foto{
     width: 307px;
-    display: table;
+    height: 200px;
     position: relative;
 }
 .foto_block{
@@ -90,8 +97,8 @@
     bottom: -100px;
     font-weight: 400;
 }
-.fig:hover .foto_block{
-    bottom: 43px;
+.img_block:hover .foto_block{
+    bottom: 0;
     transition: 1s;
 }
 .foto_block_text1{
@@ -119,11 +126,12 @@
     border-image: linear-gradient(to bottom, white, black) 1;
 }
 .figcap {
+
     text-transform: capitalize;
-    display: block;
     padding-top: 22px;
+
 }
-.figcap:hover{
+.img_block:hover .figcap{
     color: #f26522;
 }
 footer{
