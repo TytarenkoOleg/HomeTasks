@@ -1,0 +1,215 @@
+.navbar {
+    box-sizing: border-box;
+    background-color: #3f4043;
+    height: 37px;
+    /*padding-left: 20px;*/
+    background-size: cover;
+}
+
+.container {
+width: 320px;
+margin: 0 auto;
+}
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.navbar-title {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 12px;
+    line-height: 37px;
+    margin-left: 19px;
+}
+
+.navbar-button {
+    box-sizing: border-box;
+    background-color: #000;
+    padding:12px 14px;
+    width: 42px;
+    height: 37px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar-button span {
+    height: 2px;
+    margin: 1px 0;
+    width: 100%;
+    background: #ffffff;
+}
+
+.navbar-button span:last-of-type {
+    display: none;
+}
+
+.navbar-menu {
+    background-color: #fafafa;
+    position: absolute;
+    right: 0;
+    top: 37px;
+    width: 182px;
+    padding-bottom: 5px;
+    display: none;
+}
+
+.navbar-menu-link {
+    display: block;
+    padding: 14px 12px;
+    border-bottom: 2px solid #f2f2f2;
+    color: #444;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-menu-link:hover {
+    background-color: #f5f5f5;
+}
+
+.navbar-menu-link.active {
+    background-color: #f5f5f5;
+}
+
+.header{
+    /*padding-left: 20px;*/
+    box-sizing: border-box;
+    padding-top: 19px;
+    /*padding-bottom: 94px;*/
+    background: url("../images/header-fon copy 3.png") no-repeat;
+    width: 320px;
+    /*background-size: cover;*/
+  display: block;
+    height: 173px;
+    margin: 0 auto 4px auto;
+
+}
+
+.header-title{
+    margin-bottom: 11px;
+    margin-left: 20px;
+    /*margin-top: 19px;*/
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 24px;
+
+}
+
+.header-site-link{
+    margin-left: 20px;
+    font-family: 'Lato', sans-serif;
+    color: #a6d6e0;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.food-menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.food-menu-delivery {
+    background-size: cover;
+    background: url("../images/Pizza delivery fon copy 3.png") no-repeat center;
+}
+
+.food-menu-item{
+    position: relative;
+    margin-right: 71px;
+    flex-basis: 100%;
+    text-decoration: none;
+}
+
+.food-menu-name{
+    padding: 27px 0;
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.food-menu-item::after{
+    position: absolute;
+    left: 249px;
+    content: "&gt;";
+    width: 71px;
+    height: 75px;
+    font-family: 'Lato', sans-serif;
+    background-color: #add9ae;
+    font-size: 20px;
+    color: #fff;
+}
+
+.food-menu-uaix{
+    background-size: cover;
+    background: url("../images/UA_UX Salads fon copy 3.png") no-repeat center;
+
+}
+.food-menu-desserts{
+    background-size: cover;
+    background: url("../images/Desserts fon copy 3.png") no-repeat center;
+}
+
+/*section text-menu*/
+.text-menu{
+    font-family: 'Lato', sans-serif;
+    nt-size: 20.07px;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 26px;
+}
+.text-menu-header{
+    color:  #3f4043;
+}
+.text-menu-text1{
+    color:  #cbcdce;
+    font-size: 10.03px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+.text-menu-text2{
+    color:  #acd9ad;
+    background-color: #3d3e41;
+    padding: 11px 86px 11px 19px;
+}
+.container-price{
+    width: 285px;
+    margin: 11px auto 0 auto;
+    font-family: 'Lato', sans-serif;
+    color:  #3f4043;
+    font-size: 15.05px;
+    font-weight: 400;
+    text-align: left;
+
+}
+.container-price ul{
+    font-size: 13.55px;
+    margin-top: 14px;
+    margin-bottom: 9px;
+}
+.text-menu-price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.price{
+    font-weight: 700;
+}
+.description{
+    font-family: 'Lato', sans-serif;
+    color:  #3f4043;
+    font-size: 8.78px;
+    font-weight: 400;
+    text-align: justify;
+}
+li:before {
+    content: "\2B24";
+    font-size: 2px;
+    align-items: center;
+}
