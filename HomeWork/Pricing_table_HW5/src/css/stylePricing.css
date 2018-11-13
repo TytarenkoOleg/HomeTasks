@@ -22,7 +22,7 @@ td {
     padding: 29px auto 27px;
     table-layout: auto;
     margin: 0;
-    box-shadow: inset 4px 0px 5px rgba(0, 0, 0, 0.27);
+    box-shadow: inset -5px 0 5px -5px rgba(0, 0, 0, 0.27);
 }
 
 .th-top {
@@ -140,6 +140,7 @@ td:last-child {
     display: inline-block;
     padding: 19px 44px 17px 45px;
     border-radius: 5px;
+    border-bottom: 7px solid #404040;
     background-color: #484848;
     text-decoration: none;
     color: #fff;
@@ -172,12 +173,15 @@ td:last-child {
 
 .button_buy1 {
     background-color: #89c331;
+    border-bottom: 7px solid #79b027;
 }
 
 .button_buy2 {
     background-color: #f04a56;
+    border-bottom: 7px solid #df3a46;
 }
 
 .button_buy3 {
     background-color: #20807c;
+    border-bottom: 7px solid #16736f;
 }

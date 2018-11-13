@@ -10,6 +10,7 @@
 }
 .header{
     width: 775px;
+
 }
 .header-img{
     width: 46px;
@@ -97,9 +98,15 @@
     bottom: -100px;
     font-weight: 400;
 }
+.img_block .foto_block{
+    transition: transform 1s;
+}
 .img_block:hover .foto_block{
     bottom: 0;
+    /*transform: translate(1);*/
+    /*transition: transform 0.5s ease;*/
     transition: 1s;
+    /*transition: transform 1s;*/
 }
 .foto_block_text1{
     font-size: 10px;
@@ -107,7 +114,7 @@
     width: 38px;
     display: inline-block;
     margin-right: 126px;
-    padding-top: 16px;
+    /*padding-top: 16px;*/
 }
 .foto_block_text2{
     font-size: 14px;
